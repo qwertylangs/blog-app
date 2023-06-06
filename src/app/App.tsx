@@ -1,4 +1,4 @@
-import { FC, Suspense } from 'react';
+import { FC, Suspense, useEffect } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
@@ -9,6 +9,10 @@ import './styles/index.scss';
 
 const App: FC = () => {
   const { theme } = useTheme();
+
+  useEffect(() => {
+    throw new Error('Тестовая ошибка');
+  }, [theme]);
 
   return (
     <main className={classNames('app', {}, [theme])}>
