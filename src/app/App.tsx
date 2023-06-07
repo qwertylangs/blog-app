@@ -10,10 +10,6 @@ import './styles/index.scss';
 const App: FC = () => {
   const { theme } = useTheme();
 
-  useEffect(() => {
-    throw new Error('Тестовая ошибка');
-  }, [theme]);
-
   return (
     <main className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
