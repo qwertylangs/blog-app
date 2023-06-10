@@ -2,7 +2,7 @@ import { FC, Suspense, useEffect } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
-import { Sidebar } from 'widgets/Sidebar';
+import { SideBar } from 'widgets/SideBar';
 import { AppRouter } from './providers/Router';
 import { useTheme } from './providers/ThemeProvider/lib/useTheme';
 import './styles/index.scss';
@@ -15,7 +15,7 @@ const App: FC = () => {
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">
-          <Sidebar />
+          <SideBar />
           <AppRouter />
         </div>
       </Suspense>

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { NotFoundPage } from 'pages/NotFoundPage';
+import { PageError } from 'widgets/PageError';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -32,7 +32,7 @@ class ErrorBoundary extends React.Component<
     if (hasError) {
       return (
         <Suspense fallback="">
-          <NotFoundPage />
+          <PageError />
         </Suspense>
       );
     }
