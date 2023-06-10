@@ -1,17 +1,16 @@
-import { FC, Suspense, useEffect } from 'react';
-
+import React, { Suspense, useEffect } from 'react';
+import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { AppRouter } from './providers/Router';
+import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider/lib/useTheme';
-import './styles/index.scss';
 
-const App: FC = () => {
+function App() {
   const { theme } = useTheme();
 
   return (
-    <main className={classNames('app', {}, [theme])}>
+    <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">
@@ -19,8 +18,8 @@ const App: FC = () => {
           <AppRouter />
         </div>
       </Suspense>
-    </main>
+    </div>
   );
-};
+}
 
 export default App;
