@@ -1,11 +1,11 @@
 {
-  "About Page": "About Page",
-  "About Page Link": "About Page Link",
-  "Language": "Language",
-  "Main Page": "Main Page",
-  "Main Page Link": "Main Page Link",
-  "Main Page appappa": "Main Page appappa",
-  "Page not found": "Page not found",
-  "Refresh page": "Refresh page",
-  "Something went wrong": "Something went wrong"
+  "throw error": "throw error",
+  "Главная": "Главная",
+  "Главная страница": "Главная страница",
+  "О сайте": "О сайте",
+  "О сайте123123": "О сайте123123",
+  "Обновить страницу": "Обновить страницу",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Страница не найдена": "Страница не найдена",
+  "Язык": "Язык"
 }

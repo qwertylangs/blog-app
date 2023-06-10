@@ -1,9 +1,13 @@
 {
-  "Welcome to React": "Welcome to React",
-  "Translate": "Translate",
-  "Main Page Link": "To Main Page",
-  "About Page Link": "To About Page",
-  "Main Page":"Main Page",
-  "Language": "English",
-  "Page not found": "Page not found"
+  "Тестовый пример": "Test example",
+  "Перевод": "Translate",
+  "Главная страница": "Main page",
+  "Язык": "English",
+  "новый перевод": "новый перевод",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Обновить страницу": "Reload page",
+  "throw error": "throw error",
+  "Главная": "Main",
+  "О сайте": "About us"
 }
