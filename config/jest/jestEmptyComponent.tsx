@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 
-const jestEmptyComponent: FC = () => {
-  return <div />;
-};
+const jestEmptyComponent: FC = () => <div />;
 
 export default jestEmptyComponent;
