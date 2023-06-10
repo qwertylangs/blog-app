@@ -9,8 +9,6 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     modules: [options.paths.src, 'node_modules'],
     mainFiles: ['index'],
     alias: {
-      app: path.resolve(__dirname, 'src/app'),
-      widgets: path.resolve(__dirname, 'src/widgets'),
     },
   };
 }
