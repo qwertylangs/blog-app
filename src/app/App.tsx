@@ -14,6 +14,7 @@ const App: FC = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+  console.log(__IS_DEV__);
 
   return (
     <main className={classNames('app', {}, [])}>
