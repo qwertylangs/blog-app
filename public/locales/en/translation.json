@@ -1,14 +1,15 @@
 {
-  "Тестовый пример": "Test example",
-  "Перевод": "Translate",
-  "Главная страница": "Main page",
-  "Язык": "English",
-  "Короткий язык": "EN",
-  "новый перевод": "новый перевод",
-  "Страница не найдена": "Page not found",
-  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
-  "Обновить страницу": "Reload page",
-  "throw error": "throw error",
+  "About Page": "About Page",
+  "Enter text": "Enter text",
+  "Main Page": "Main Page",
+  "Page not found": "Page not found",
+  "Refresh page": "Refresh page",
+  "Something went wrong": "Something went wrong",
+  "Enter username": "Enter username",
+  "Enter password": "Enter password",
+  "Войти": "Log In",
   "Главная": "Main",
-  "О сайте": "About us"
+  "Короткий язык": "En",
+  "О сайте": "About",
+  "Язык": "Lang"
 }
