@@ -1,18 +1,18 @@
-import { Counter } from 'entities/Counter';
-import { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
 
-const MainPage: FC = () => {
+const MainPage = () => {
   const { t } = useTranslation();
-
   const [value, setValue] = useState('');
-  const onChange = (newValue: string) => setValue(newValue);
+
+  const onChange = (val: string) => {
+    setValue(val);
+  };
 
   return (
     <div>
-      {t('Main Page')}
-      <Input value={value} onChange={onChange} placeholder={t('Enter text')} />
+      {t('Главная страница')}
     </div>
   );
 };

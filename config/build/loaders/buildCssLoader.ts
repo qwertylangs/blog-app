@@ -4,9 +4,7 @@ export function buildCssLoader(isDev: boolean) {
   return {
     test: /\.s[ac]ss$/i,
     use: [
-      // Creates `style` nodes from JS strings
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      // Translates CSS into CommonJS
       {
         loader: 'css-loader',
         options: {
@@ -18,7 +16,6 @@ export function buildCssLoader(isDev: boolean) {
           },
         },
       },
-      // Compiles Sass to CSS
       'sass-loader',
     ],
   };

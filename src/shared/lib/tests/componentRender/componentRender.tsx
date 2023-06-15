@@ -7,8 +7,8 @@ import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { DeepPartial } from '@reduxjs/toolkit';
 
 export interface componentRenderOptions {
-  route?: string;
-  initialState?: DeepPartial<StateSchema>
+    route?: string;
+    initialState?: DeepPartial<StateSchema>;
 }
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
