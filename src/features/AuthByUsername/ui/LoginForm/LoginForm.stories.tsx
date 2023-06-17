@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args
 export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({
-  loginForm: { username: '123', password: 'asd' },
+  loginForm: { username: '123', password: 'asd', isLoading: false },
 })];
 
 export const withError = Template.bind({});
