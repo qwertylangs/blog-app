@@ -5,10 +5,10 @@ import { Profile } from '../../types/profile';
 export const fetchProfileData = createAsyncThunk<
   Profile, undefined, ThunkConfig<string>
 >(
-  'login/loginByUsername',
+  'profile/fetchProfileData',
   async (_, { rejectWithValue, extra: { api } }) => {
     try {
-      const response = await api.post<Profile>('/profile');
+      const response = await api.get<Profile>('/profile');
 
       return response.data;
     } catch (e) {
