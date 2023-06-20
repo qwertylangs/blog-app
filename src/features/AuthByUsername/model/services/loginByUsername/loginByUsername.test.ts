@@ -6,13 +6,13 @@ import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUsername } from './loginByUsername';
 
 describe('test loginByUsername.test', () => {
-  let dispatch: Dispatch;
-  let getState: () => StateSchema;
+  // let dispatch: Dispatch;
+  // let getState: () => StateSchema;
 
-  beforeEach(() => {
-    dispatch = jest.fn();
-    getState = jest.fn();
-  });
+  // beforeEach(() => {
+  //   dispatch = jest.fn();
+  //   getState = jest.fn();
+  // });
 
   // test('success', async () => {
   //   const userData = { username: 'xxx', id: '1' };

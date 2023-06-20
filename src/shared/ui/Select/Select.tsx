@@ -20,7 +20,9 @@ export const Select = memo((props: SelectProps) => {
   const {
     className, label, options, value, onChange,
   } = props;
-  const mods = {};
+  const mods = {
+    [cls.readonly]: props.readonly,
+  };
 
   const optionList = useMemo(() => options?.map((opt) => (
     <option className={cls.option} value={opt.value} key={opt.value}>
