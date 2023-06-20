@@ -8,5 +8,5 @@ interface TemplateNameProps {
 
 export const TemplateName = ({ className }: TemplateNameProps) => {
   const { t } = useTranslation();
-  return <div className={classNames(cls.TemplateName, {}, [className])}>TemplateName</div>;
+  return <div className={classNames(cls.TemplateName, {}, [className])} />;
 };

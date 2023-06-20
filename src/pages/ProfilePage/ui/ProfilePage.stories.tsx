@@ -18,20 +18,22 @@ export default {
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
+const form = {
+  age: 20,
+  city: 'Mogilev',
+  country: Country.BELARUS,
+  currency: Currency.RUB,
+  lastname: 'QWERT',
+  first: 'Egor',
+  username: 'amogus',
+  avatar,
+};
+
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({
   profile: {
-    form: {
-      age: 20,
-      city: 'Mogilev',
-      country: Country.BELARUS,
-      currency: Currency.RUB,
-      lastname: 'QWERT',
-      first: 'Egor',
-      username: 'amogus',
-      avatar,
-    },
+    form,
   },
 })];
 
@@ -39,15 +41,14 @@ export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
   profile: {
-    form: {
-      age: 20,
-      city: 'Mogilev',
-      country: Country.BELARUS,
-      currency: Currency.RUB,
-      lastname: 'QWERT',
-      first: 'Egor',
-      username: 'amogus',
-      avatar,
-    },
+    form,
+  },
+})];
+
+export const Purple = Template.bind({});
+Purple.args = {};
+Purple.decorators = [ThemeDecorator(Theme.PURPLE), StoreDecorator({
+  profile: {
+    form,
   },
 })];
