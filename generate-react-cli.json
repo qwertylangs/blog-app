@@ -1,0 +1,48 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": true,
+  "cssPreprocessor": "scss",
+  "testLibrary": "Testing Library",
+  "styled-components": false,
+  "component": {
+    "shared": {
+      "customTemplates": {
+        "component": "templates/shared/TemplateName.tsx",
+        "story":  "templates/shared/TemplateName.story.tsx",
+        "style": "templates/shared/TemplateName.module.scss"
+      },
+      "path": "src/shared/ui",
+      "withLazy": false,
+      "withStory": true,
+      "withStyle": true,
+      "withTest": false
+    },
+    "entity": {
+      "path": "src/entities",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": true,
+      "withTest": true
+    },
+    "page": {
+      "path": "src/pages",
+      "withLazy": true,
+      "withStory": false,
+      "withStyle": true,
+      "withTest": true
+    },
+    "default": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": true,
+      "withLazy": false
+    }
+  },
+  "customTemplates": {
+    "component": "templates/TemplateName.js",
+    "story":  "templates/TemplateName.story.js",
+    "style": "templates/TemplateName.module.scss"
+  },
+  "usesStyledComponents": false
+}

@@ -11,7 +11,7 @@ const MainPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ color: 'red' }}>
       {t('Главная страница')}
     </div>
   );
