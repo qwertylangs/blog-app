@@ -8,7 +8,7 @@
     "shared": {
       "customTemplates": {
         "component": "templates/shared/TemplateName.tsx",
-        "story":  "templates/shared/TemplateName.story.tsx",
+        "story":  "templates/shared/TemplateName.stories.tsx",
         "style": "templates/shared/TemplateName.module.scss"
       },
       "path": "src/shared/ui",
@@ -18,11 +18,16 @@
       "withTest": false
     },
     "entity": {
+      "customTemplates": {
+        "component": "templates/shared/TemplateName.tsx",
+        "story":  "templates/entities/TemplateName.stories.tsx",
+        "style": "templates/shared/TemplateName.module.scss"
+      },
       "path": "src/entities",
       "withLazy": false,
-      "withStory": false,
+      "withStory": true,
       "withStyle": true,
-      "withTest": true
+      "withTest": false
     },
     "page": {
       "path": "src/pages",
