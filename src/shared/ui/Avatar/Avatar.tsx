@@ -21,7 +21,7 @@ export const Avatar = memo(({
   return (
     <img
       src={src}
-      alt={alt}
+      alt={alt || 'avatar'}
       className={classNames(cls.Avatar, mods, [className])}
       style={style}
     />

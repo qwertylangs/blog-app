@@ -4,5 +4,9 @@
   "article-details.proizoshla-oshibka-pri-zaproe-na-server": "",
   "article-details.comments": "Комментарии",
   "article-details.article-details.comments": "Комментарии",
-  "article-details.statya-ne-naidena": "Статья не найдена"
+  "article-details.back-to-list-0": "Назад к списку",
+  "back-to-articles": "Назад к статьям",
+  "no-article": "нет",
+  "comments": "Комментарии",
+  "proizoshla-oshibka-pri-zaproe-na-server": "Ошибка сервера"
 }

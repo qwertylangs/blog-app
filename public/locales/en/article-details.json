@@ -1,10 +1,9 @@
 {
   "Статья не найдена": "Article not found",
   "Произошла ошибка при запросе статьи": "Error loading article",
-  "proizoshla-oshibka-pri-zaproe-na-server": "произошла ошибка при запрое на сервер",
+  "proizoshla-oshibka-pri-zaproe-na-server": "server error ",
   "comments": "Comments",
-  "article-details.comments": "Comments",
-  "article-details.article-details.comments": "Comments",
   "statya-ne-naidena": "Статья не найдена",
-  "article-details.statya-ne-naidena": "Not found"
+  "back-to-articles": "Back to articles",
+  "no-article": "no article"
 }

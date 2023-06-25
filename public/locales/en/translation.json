@@ -24,5 +24,8 @@
   "Укажите валюту": "Enter currency",
   "Укажите страну": "Enter country",
   "copy": "Copy",
-  "no-comments": "No comments"
+  "no-comments": "No comments",
+  "send": "Send",
+  "enter-comment-text": "Enter comment text",
+  "read-more": "Read more..."
 }

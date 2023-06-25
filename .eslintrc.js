@@ -43,6 +43,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'arrow-body-style': 'off',
+    'react/no-array-index-key': 'off',
     'i18next/no-literal-string': [
       'error',
       {

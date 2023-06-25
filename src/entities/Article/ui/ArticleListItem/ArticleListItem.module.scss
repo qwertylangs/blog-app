@@ -1,0 +1,115 @@
+.articleListItem {
+  display: block;
+}
+
+.BIG {
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .username {
+    margin-left: 8px;
+  }
+
+  .date {
+    margin-left: auto;
+  }
+
+  .title {
+    margin-top: 10px;
+  }
+
+  .types p {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .image {
+    margin-top: 20px;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .textBlock {
+    height: 210px;
+    overflow-y: hidden;
+  }
+
+  .footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .views {
+    margin-left: auto;
+  }
+}
+
+.SMALL {
+  width: 230px;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  .imageWrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 16px 0;
+  }
+
+  .date {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:hover {
+    opacity: 0.85;
+    transform: scale(1.01);
+
+    .date {
+      display: block;
+    }
+  }
+
+  .infoWrapper {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  .types p {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  .title {
+    margin-top: 8px;
+
+    p {
+      width: 200 px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

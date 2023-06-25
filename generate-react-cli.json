@@ -29,6 +29,18 @@
       "withStyle": true,
       "withTest": false
     },
+    "feature": {
+      "customTemplates": {
+        "component": "templates/shared/TemplateName.tsx",
+        "story":  "templates/features/TemplateName.stories.tsx",
+        "style": "templates/shared/TemplateName.module.scss"
+      },
+      "path": "src/entities",
+      "withLazy": false,
+      "withStory": true,
+      "withStyle": true,
+      "withTest": false
+    },
     "page": {
       "path": "src/pages",
       "withLazy": true,
