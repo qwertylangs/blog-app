@@ -28,5 +28,18 @@
   "no-comments": "No comments",
   "send": "Send",
   "enter-comment-text": "Enter comment text",
-  "read-more": "Read more..."
+  "read-more": "Read more...",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "By": "By",
+  "ascending": "ascending",
+  "descending": "descending",
+  "views": "views",
+  "title": "title",
+  "created date": "created date",
+  "IT": "IT",
+  "All": "All",
+  "Economics": "Economics",
+  "Science": "Science",
+  "Articles not found": "Articles not found"
 }

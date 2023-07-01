@@ -23,8 +23,9 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
     "prepare": "husky install",
-    "generate:entity": "npx generate-react-cli component %npm_config_filename% --type=entity --path=src/entities/%npm_config_entity%/ui",
+    "generate:page": "npx generate-react-cli component %npm_config_filename% --type=page --path=src/pages/%npm_config_page%/ui",
     "generate:feature": "npx generate-react-cli component %npm_config_filename% --type=feature --path=src/features/%npm_config_feature%/ui",
+    "generate:entity": "npx generate-react-cli component %npm_config_filename% --type=entity --path=src/entities/%npm_config_entity%/ui",
     "generate:shared": "npx generate-react-cli component %npm_config_filename% --type=shared"
   },
   "keywords": [],

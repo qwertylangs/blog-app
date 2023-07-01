@@ -42,11 +42,16 @@
       "withTest": false
     },
     "page": {
+      "customTemplates": {
+        "component": "templates/shared/TemplateName.tsx",
+        "story":  "templates/pages/TemplateName.stories.tsx",
+        "style": "templates/shared/TemplateName.module.scss"
+      },
       "path": "src/pages",
-      "withLazy": true,
-      "withStory": false,
+      "withLazy": false,
+      "withStory": true,
       "withStyle": true,
-      "withTest": true
+      "withTest": false
     },
     "default": {
       "path": "src/components",

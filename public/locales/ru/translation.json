@@ -28,5 +28,18 @@
   "no-comments": "Комментариев нет",
   "send": "Отправить",
   "enter-comment-text": "Введите текст комментария",
-  "read-more": "Читать далее..."
+  "read-more": "Читать далее...",
+  "Sort by": "Сортировать по",
+  "Search": "Поиск",
+  "By": "По",
+  "ascending": "возрастанию",
+  "descending": "убыванию",
+  "views": "просмотрам",
+  "title": "заголовку",
+  "created date": "дате создания",
+  "IT": "IT",
+  "All": "Все",
+  "Economics": "Экономика",
+  "Science": "Наука",
+  "Articles not found": "Статьи не найдены"
 }
