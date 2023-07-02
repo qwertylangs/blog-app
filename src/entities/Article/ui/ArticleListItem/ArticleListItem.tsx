@@ -27,7 +27,6 @@ export const ArticleListItem = memo(({
   className, article, view, target,
 }: ArticleListItemProps) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   const types = <Text text={article.type.join(', ')} className={cls.types} />;
   const views = (
@@ -42,7 +41,7 @@ export const ArticleListItem = memo(({
 
   if (view === ArticleView.BIG) {
     const textBlock = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
-    console.log(article);
+
     return (
       <div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
         <Card className={cls.card}>
