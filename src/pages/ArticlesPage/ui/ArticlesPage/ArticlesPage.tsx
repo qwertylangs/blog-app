@@ -13,7 +13,7 @@ import { initArticlesPage } from '../../model/services/initArticlesPage/initArti
 import {
   getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
-import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slice/articlesPageSlice';
+import { articlesPageReducer, getArticles } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
