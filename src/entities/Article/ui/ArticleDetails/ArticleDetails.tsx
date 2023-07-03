@@ -12,6 +12,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import {
   getArticleDetailsData,
@@ -79,24 +80,26 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   } else {
     content = (
       <>
-        <div className={cls.avatarWrapper}>
+        <HStack justify="center" max>
           <Avatar src={article?.img} size={200} className={cls.avatar} />
-        </div>
-        <Text
-          title={article?.title}
-          text={article?.subtitle}
-          size={TextSize.L}
-          className={cls.title}
-        />
+        </HStack>
+        <VStack gap="8" max>
+          <Text
+            title={article?.title}
+            text={article?.subtitle}
+            size={TextSize.L}
+            className={cls.title}
+          />
 
-        <div className={cls.articleInfo}>
-          <Icon Svg={EyeIcon} className={cls.icon} />
-          <Text text={String(article?.views)} />
-        </div>
-        <div className={cls.articleInfo}>
-          <Icon Svg={CalendarIcon} className={cls.icon} />
-          <Text text={article?.createdAt} />
-        </div>
+          <HStack gap="8">
+            <Icon Svg={EyeIcon} />
+            <Text text={String(article?.views)} />
+          </HStack>
+          <HStack gap="8">
+            <Icon Svg={CalendarIcon} />
+            <Text text={article?.createdAt} />
+          </HStack>
+        </VStack>
         {article?.blocks.map(renderBlock)}
       </>
     );
@@ -104,7 +107,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.articleDetails, {}, [className])}>{content}</div>
+      <VStack gap="16" max className={classNames(cls.articleDetails, {}, [className])}>
+        {content}
+      </VStack>
     </DynamicModuleLoader>
   );
 });

@@ -11,6 +11,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { Page } from 'widgets/Page/Page';
+import { VStack } from 'shared/ui/Stack';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import {
@@ -68,18 +69,20 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <ArticleDetailsPageHeader />
+        <VStack gap="16" max>
+          <ArticleDetailsPageHeader />
 
-        <ArticleDetails id={id} />
-        <Text size={TextSize.L} title={t('Recommendations')} className={cls.recommendationsTitle} />
-        <ArticleList articles={recommendations} target="_blank" isLoading={recommendationsIsLoading} className={cls.recommendations} />
+          <ArticleDetails id={id} />
+          <Text size={TextSize.L} title={t('Recommendations')} className={cls.recommendationsTitle} />
+          <ArticleList articles={recommendations} target="_blank" isLoading={recommendationsIsLoading} className={cls.recommendations} />
 
-        <Text size={TextSize.L} title={t('comments')} className={cls.commentTitle} />
-        <AddCommentForm onSendComment={onSendComment} />
-        <CommentList
-          comments={comments}
-          isLoading={commentsIsLoading}
-        />
+          <Text size={TextSize.L} title={t('comments')} className={cls.commentTitle} />
+          <AddCommentForm onSendComment={onSendComment} />
+          <CommentList
+            comments={comments}
+            isLoading={commentsIsLoading}
+          />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   );
