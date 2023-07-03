@@ -22,6 +22,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'qwerty-path-plugin',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -58,6 +59,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
     'no-param-reassign': 'off',
     'no-undef': 'off',
+    'qwerty-path-plugin/path-checker': 'error',
   },
   overrides: [
     {
