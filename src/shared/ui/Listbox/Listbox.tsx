@@ -1,30 +1,19 @@
 import {
-  memo, Fragment, useState, ReactNode,
+  memo, Fragment, ReactNode,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { Listbox as HListbox } from '@headlessui/react';
-// import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
+import { DropdownDirection } from 'shared/types/ui';
 import cls from './Listbox.module.scss';
 import { Button } from '../Button/Button';
 import { HStack } from '../Stack';
-
-const people = [
-  { name: 'Wade Cooper' },
-  { name: 'Arlene Mccoy' },
-  { name: 'Devon Webb' },
-  { name: 'Tom Cook' },
-  { name: 'Tanya Fox' },
-  { name: 'Hellen Schmidt' },
-];
 
 export interface ListboxItem {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownDirection = 'top' | 'bottom';
 
 interface ListboxProps {
   items: ListboxItem[];
@@ -38,13 +27,15 @@ interface ListboxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-  top: cls.optionsTop,
-  bottom: cls.optionsBottom,
+  'top left': cls.optionsTopLeft,
+  'top right': cls.optionsTopRight,
+  'bottom left': cls.optionsBottomLeft,
+  'bottom right': cls.optionsBottomRight,
 };
 
 export const Listbox = memo((props: ListboxProps) => {
   const {
-    className, items, value, defaultValue, onChange, readonly, direction = 'bottom', label,
+    className, items, value, defaultValue, onChange, readonly, direction = 'bottom right', label,
   } = props;
 
   return (
