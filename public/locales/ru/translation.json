@@ -45,5 +45,6 @@
   "Recommendations": "Рекомендации",
   "Create article": "Создать статью",
   "My blog app": "Мой блог",
-  "User profile": "Профиль пользователя"
+  "User profile": "Профиль пользователя",
+  "Error when loading articles": "Ошибка при загрузке статей"
 }

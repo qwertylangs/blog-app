@@ -86,6 +86,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         readonly={readonly}
       />
 
+      <div />
+
       <Input
         value={data?.lastname}
         placeholder={t('Ваша фамилия')}

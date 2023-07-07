@@ -53,7 +53,7 @@ export const Dropdown = (props: DropdownProps) => {
 
           if (item.href) {
             return (
-              <Menu.Item as={AppLink} to={item.href} disabled={item.disabled}>
+              <Menu.Item as={AppLink} to={item.href} disabled={item.disabled} key={i}>
                 {content}
               </Menu.Item>
             );

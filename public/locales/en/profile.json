@@ -5,17 +5,15 @@
   "Ваша фамилия": "Your lastname",
   "Ошибка при загрузке профиля": "Error fetch profile",
   "Попробуйте обновить страницу": "Try reload pagwe",
-
   "Ваш возраст": "You age",
   "Город": "Sity",
   "Введите имя пользователя": "Enter username",
   "Введите ссылку на аватар": "Enter avatar link",
-  
   "Некорректный возраст": "Incorrect age",
   "Имя и фамилия должны быть заполнены": "Name and lastname required",
   "Серверная ошибка": "Server error",
   "Данные не указаны": "No data",
-  "Редактировать": "Edit",
   "Сохранить": "Save",
-  "Отменить": "Cancel"
+  "Отменить": "Cancel",
+  "Profile not found": "Profile not found"
 }
