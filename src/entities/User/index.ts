@@ -4,6 +4,10 @@ export {
 } from './model/selectors/getUserAuthData/getUserAuthData';
 
 export {
+  isUserAdmin, isUserManager, getUserRoles,
+} from './model/selectors/roleSelectors';
+
+export {
   userReducer,
   userActions,
 } from './model/slice/userSlice';
@@ -11,4 +15,5 @@ export {
 export {
   UserSchema,
   User,
+  UserRole,
 } from './model/types/user';

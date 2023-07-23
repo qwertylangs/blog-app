@@ -47,5 +47,7 @@
   "Create article": "Create article",
   "My blog app": "My blog app",
   "User profile": "User profile",
-  "Error when loading articles": "Error when loading articles"
+  "Error when loading articles": "Error when loading articles",
+  "Admin panel": "Admin panel",
+  "You dont have acess to this page": "You dont have acess to this page"
 }

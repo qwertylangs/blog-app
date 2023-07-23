@@ -46,5 +46,7 @@
   "Create article": "Создать статью",
   "My blog app": "Мой блог",
   "User profile": "Профиль пользователя",
-  "Error when loading articles": "Ошибка при загрузке статей"
+  "Error when loading articles": "Ошибка при загрузке статей",
+  "Admin panel": "Админка",
+  "You dont have acess to this page": "У вас нет доступа к этой странице"
 }

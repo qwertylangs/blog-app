@@ -1,7 +1,5 @@
-import { Menu, Transition } from '@headlessui/react';
-import {
-  Fragment, ReactNode, useEffect, useRef, useState,
-} from 'react';
+import { Menu } from '@headlessui/react';
+import { Fragment, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 import cls from './Dropdown.module.scss';

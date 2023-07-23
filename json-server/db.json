@@ -976,6 +976,12 @@
       "userId": "1",
       "text": "bebebe",
       "id": "3CEbIwO"
+    },
+    {
+      "articleId": "17",
+      "userId": "1",
+      "text": "some comment test",
+      "id": "VfLt0xu"
     }
   ],
   "users": [
@@ -983,15 +989,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "role": [
+        "ADMIN"
+      ],
       "avatar": "https://i.pravatar.cc/100"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "role": [
+        "USER"
+      ],
       "avatar": "https://rg.ru/uploads/images/125/44/18/11111111.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "role": [
+        "MANAGER"
+      ],
+      "avatar": "https://i.pravatar.cc/100"
     }
   ],
   "profile": [
@@ -1000,8 +1019,8 @@
       "first": "jghqsqsqs",
       "lastname": "asf",
       "age": 465,
-      "currency": "RUB",
-      "country": "Ukraine",
+      "currency": "EUR",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
@@ -1011,6 +1030,17 @@
       "first": "user",
       "lastname": "user1q1",
       "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://rg.ru/uploads/images/125/44/18/11111111.jpg"
+    },
+    {
+      "id": "3",
+      "first": "manager",
+      "lastname": "manager",
+      "age": 46,
       "currency": "RUB",
       "country": "Belarus",
       "city": "Moscow",

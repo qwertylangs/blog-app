@@ -4,7 +4,9 @@ import React, { memo, useCallback, useState } from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserAuthData, userActions } from 'entities/User';
+import {
+  getUserAuthData, isUserAdmin, isUserManager, userActions,
+} from 'entities/User';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
@@ -21,6 +23,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
+
+  const isAdmin = useSelector(isUserAdmin);
+  const isManager = useSelector(isUserManager);
+
+  const isAdminAvailable = isAdmin || isManager;
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
@@ -52,14 +59,19 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
         <Dropdown
           className={cls.dropdown}
-          items={[{
-            content: t('Выйти'),
-            onClick: onLogout,
-          },
-          {
-            content: t('User profile'),
-            href: RoutePath.profile + authData.id,
-          }]}
+          items={[
+            ...(isAdminAvailable ? [{
+              content: t('Admin panel'),
+              href: RoutePath.admin_panel,
+            }] : []),
+            {
+              content: t('User profile'),
+              href: RoutePath.profile + authData.id,
+            },
+            {
+              content: t('Выйти'),
+              onClick: onLogout,
+            }]}
           trigger={<Avatar size={30} src={authData.avatar} alt={authData.username} />}
           direction="bottom left"
         />
