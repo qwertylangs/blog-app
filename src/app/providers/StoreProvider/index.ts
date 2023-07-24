@@ -10,6 +10,7 @@ export {
   StateSchema,
   StoreWithReducerManager,
   StateSchemaKey,
-  AppDispatch,
   ThunkConfig,
 };
+
+export type { AppDispatch };

@@ -982,6 +982,12 @@
       "userId": "1",
       "text": "some comment test",
       "id": "VfLt0xu"
+    },
+    {
+      "articleId": "10",
+      "userId": "2",
+      "text": "sefsf",
+      "id": "M2VCryV"
     }
   ],
   "users": [

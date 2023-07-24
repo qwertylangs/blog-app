@@ -29,7 +29,7 @@ export const ArticleDetailsComments = memo(({ className, id }: ArticleDetailsCom
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
   const commentsError = useSelector(getArticleCommentsError);
 
-  const onSendComment = useCallback((text) => {
+  const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text));
   }, [dispatch]);
 
