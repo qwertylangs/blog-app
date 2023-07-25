@@ -6,15 +6,16 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Listbox as HListbox } from '@headlessui/react';
 import { DropdownDirection } from 'shared/types/ui';
 import cls from './Listbox.module.scss';
-import { Button } from '../Button/Button';
-import { HStack } from '../Stack';
+import { Button } from '../../../Button/Button';
+import { HStack } from '../../../Stack';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/Popups.module.scss';
 
 export interface ListboxItem {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 }
-
 interface ListboxProps {
   items: ListboxItem[];
   className?: string;
@@ -25,13 +26,6 @@ interface ListboxProps {
   direction?: DropdownDirection;
   label?: string;
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  'top left': cls.optionsTopLeft,
-  'top right': cls.optionsTopRight,
-  'bottom left': cls.optionsBottomLeft,
-  'bottom right': cls.optionsBottomRight,
-};
 
 export const Listbox = memo((props: ListboxProps) => {
   const {
@@ -45,7 +39,7 @@ export const Listbox = memo((props: ListboxProps) => {
         as="div"
         value={value}
         onChange={onChange}
-        className={classNames(cls.Listbox, {}, [className])}
+        className={classNames('', {}, [className, popupCls.popup])}
         disabled={readonly}
       >
         <div>

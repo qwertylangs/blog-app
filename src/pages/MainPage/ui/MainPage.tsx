@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
-import { Listbox } from 'shared/ui/Listbox/Listbox';
+import { Listbox } from 'shared/ui/Popups';
 import { HStack } from 'shared/ui/Stack';
 import { Page } from 'widgets/Page/Page';
 

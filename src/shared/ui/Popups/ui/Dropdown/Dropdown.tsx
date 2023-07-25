@@ -3,7 +3,9 @@ import { Fragment, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../AppLink/AppLink';
+import { AppLink } from '../../../AppLink/AppLink';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/Popups.module.scss';
 
 export interface DropdownItem {
   content: ReactNode;
@@ -19,21 +21,14 @@ interface DropdownProps {
   direction?: DropdownDirection;
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  'top left': cls.optionsTopLeft,
-  'top right': cls.optionsTopRight,
-  'bottom left': cls.optionsBottomLeft,
-  'bottom right': cls.optionsBottomRight,
-};
-
 export const Dropdown = (props: DropdownProps) => {
   const {
     items, trigger, className, direction = 'bottom right',
   } = props;
 
   return (
-    <Menu as="div" className={classNames(cls.menu, {}, [className])}>
-      <Menu.Button className={cls.btn}>
+    <Menu as="div" className={classNames(cls.menu, {}, [className, popupCls.popup])}>
+      <Menu.Button className={popupCls.trigger}>
         {trigger}
       </Menu.Button>
 
