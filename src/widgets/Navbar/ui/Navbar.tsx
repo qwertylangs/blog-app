@@ -22,12 +22,8 @@ interface NavbarProps {
 export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
+
   const authData = useSelector(getUserAuthData);
-
-  const isAdmin = useSelector(isUserAdmin);
-  const isManager = useSelector(isUserManager);
-
-  const isAdminAvailable = isAdmin || isManager;
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
