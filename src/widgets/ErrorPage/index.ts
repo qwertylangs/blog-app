@@ -1,1 +1,1 @@
-export interface ErrorPage {}
+export { ErrorPage } from './ui/ErrorPage';

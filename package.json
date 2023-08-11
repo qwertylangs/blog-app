@@ -98,6 +98,7 @@
     "stylelint": "^14.5.3",
     "stylelint-config-standard-scss": "^3.0.0",
     "ts-loader": "^9.2.6",
+    "ts-morph": "^19.0.0",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",
@@ -107,6 +108,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
+    "@react-spring/web": "^9.7.3",
+    "@use-gesture/react": "^10.2.27",
     "axios": "^0.26.1",
     "i18next": "^21.9.0",
     "i18next-browser-languagedetector": "^6.1.3",
