@@ -14,7 +14,6 @@ const MainPage = () => {
   return (
     <Page>
       {t('Главная страница')}
-      <RatingCard feedbackTitle="оставь отзыв" hasFeedback title="как вам сатья" />
     </Page>
   );
 };
