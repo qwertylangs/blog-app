@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from '@/shared/ui/Input/Input';
-import { Listbox } from '@/shared/ui/Popups';
-import { HStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page/Page';
+import { RatingCard } from '@/entities/Rating';
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -16,7 +14,7 @@ const MainPage = () => {
   return (
     <Page>
       {t('Главная страница')}
-
+      <RatingCard feedbackTitle="оставь отзыв" hasFeedback title="как вам сатья" />
     </Page>
   );
 };

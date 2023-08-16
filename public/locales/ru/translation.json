@@ -48,5 +48,8 @@
   "User profile": "Профиль пользователя",
   "Error when loading articles": "Ошибка при загрузке статей",
   "Admin panel": "Админка",
-  "You dont have acess to this page": "У вас нет доступа к этой странице"
+  "You dont have acess to this page": "У вас нет доступа к этой странице",
+  "Your feedback": "Ваш отзыв",
+  "Close": "Закрыть",
+  "Send": "Отправить"
 }
