@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleList } from '@/entities/Article';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { Text, TextSize } from '@/shared/ui/Text';
 
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
 
