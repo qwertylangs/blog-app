@@ -23,6 +23,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'qwerty-path-plugin',
+    'unused-imports',
   ],
   ignorePatterns: ['node_modules/', 'dist/', 'templates/'],
   rules: {
@@ -38,7 +39,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'import/extensions': 'off',
@@ -60,6 +61,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
     'no-param-reassign': 'off',
     'no-undef': 'off',
+    'unused-imports/no-unused-imports': 'error',
     'qwerty-path-plugin/path-checker': ['error', { alias: '@' }],
     'qwerty-path-plugin/public-api-imports': ['error', {
       alias: '@',
