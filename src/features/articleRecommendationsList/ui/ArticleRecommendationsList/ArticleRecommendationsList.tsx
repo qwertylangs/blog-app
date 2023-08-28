@@ -7,7 +7,6 @@ import { ArticleList } from '@/entities/Article';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
 
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
-import cls from './ArticleRecommendationsList.module.scss';
 
 interface ArticleRecommendationsListProps {
   className?: string;

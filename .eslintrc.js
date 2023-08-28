@@ -60,7 +60,15 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies,
     'no-param-reassign': 'off',
     'no-undef': 'off',
-    'qwerty-path-plugin/path-checker': 'error',
+    'qwerty-path-plugin/path-checker': ['error', { alias: '@' }],
+    'qwerty-path-plugin/public-api-imports': ['error', {
+      alias: '@',
+      testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+    }],
+    'qwerty-path-plugin/layer-fsd-imports': ['error', {
+      alias: '@',
+      ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+    }],
   },
   overrides: [
     {

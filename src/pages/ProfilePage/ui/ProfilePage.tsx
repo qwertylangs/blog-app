@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { VStack } from '@/shared/ui/Stack';
 import { EditableProfileCard } from '@/features/editableProfileCard';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { ProfileRating } from '@/features/profileRating';
 
 interface ProfilePageProps {
   className?: string
@@ -21,6 +22,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   return (
     <Page className={classNames('', {}, [className])}>
       <EditableProfileCard id={id} />
+      <ProfileRating profileId={id} />
     </Page>
   );
 };
