@@ -4,9 +4,8 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Dropdown } from '@/shared/ui/Popups';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
-  getUserAuthData, isUserAdmin, isUserManager, userActions,
+  getUserAuthData, isUserAdmin, isUserManager, useUserActions,
 } from '@/entities/User';
 import { Avatar } from '@/shared/ui/Avatar';
 import cls from './AvatarDropdown.module.scss';
@@ -20,7 +19,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
   const { t } = useTranslation();
 
   const authData = useSelector(getUserAuthData);
-  const dispatch = useAppDispatch();
+  const { logout } = useUserActions();
 
   const isAdmin = useSelector(isUserAdmin);
   const isManager = useSelector(isUserManager);
@@ -28,8 +27,8 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
   const isAdminAvailable = isAdmin || isManager;
 
   const onLogout = useCallback(() => {
-    dispatch(userActions.logout());
-  }, [dispatch]);
+    logout();
+  }, [logout]);
 
   if (!authData) {
     return null;

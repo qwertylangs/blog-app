@@ -10,6 +10,7 @@ export {
 export {
   userReducer,
   userActions,
+  useUserActions,
 } from './model/slice/userSlice';
 
 export {

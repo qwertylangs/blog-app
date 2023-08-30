@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -16,9 +15,9 @@ import { HStack, VStack } from '@/shared/ui/Stack';
 import { ArticleBlockType } from '../../model/consts/article';
 import { ArticleBlock } from '../../model/types/article';
 import {
-  getArticleDetailsData,
-  getArticleDetailsError,
-  getArticleDetailsIsLoading,
+  useArticleDetailsData,
+  useArticleDetailsError,
+  useArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import cls from './ArticleDetails.module.scss';
@@ -39,9 +38,9 @@ const reducers: ReducersList = {
 export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   const { t } = useTranslation('article-details');
   const dispatch = useAppDispatch();
-  const article = useSelector(getArticleDetailsData);
-  const isLoading = useSelector(getArticleDetailsIsLoading);
-  const error = useSelector(getArticleDetailsError);
+  const article = useArticleDetailsData();
+  const isLoading = useArticleDetailsIsLoading();
+  const error = useArticleDetailsError();
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
