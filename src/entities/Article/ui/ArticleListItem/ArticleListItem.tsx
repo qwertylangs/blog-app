@@ -15,6 +15,8 @@ import {
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleView, ArticleBlockType } from '../../model/consts/article';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
   className?: string;
@@ -35,7 +37,7 @@ export const ArticleListItem = memo(({
       <Icon Svg={EyeIcon} className={cls.eyeIcon} />
     </>
   );
-  const articleImg = <img src={article.img} alt={article.title} className={cls.image} />;
+
   const createdAt = <Text text={article.createdAt} className={cls.date} />;
   const title = <Text text={article.title} className={cls.title} />;
 
@@ -53,7 +55,12 @@ export const ArticleListItem = memo(({
 
           {title}
           {types}
-          {articleImg}
+          <AppImage
+            fallback={<Skeleton height={250} width="100%" />}
+            src={article.img}
+            alt={article.title}
+            className={cls.image}
+          />
           {textBlock && <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />}
 
           <div className={cls.footer}>
@@ -77,7 +84,12 @@ export const ArticleListItem = memo(({
     >
       <Card className={cls.card}>
         <div className={cls.imageWrapper}>
-          {articleImg}
+          <AppImage
+            fallback={<Skeleton height={200} width={200} />}
+            src={article.img}
+            alt={article.title}
+            className={cls.image}
+          />
           {createdAt}
         </div>
 
