@@ -4,6 +4,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleBlockType, ArticleType } from '../../model/consts/article';
 import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
+import AvatarImg from '@/shared/assets/tests/avatar.jpg';
 
 export default {
   title: 'entities/Article/ArticleDetails',
@@ -23,7 +24,7 @@ const article: Article = {
   user: {
     id: '1',
     username: 'admin',
-    avatar: 'https://i.pravatar.cc/100',
+    avatar: AvatarImg,
   },
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',

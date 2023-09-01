@@ -5,6 +5,7 @@ import {
   ArticleBlockType, ArticleType, ArticleView,
 } from '../../model/consts/article';
 import { Article } from '../../model/types/article';
+import AvatarImg from '@/shared/assets/tests/avatar.jpg';
 
 export default {
   title: 'entities/Article/ArticleListItem',
@@ -24,7 +25,7 @@ const article = {
   user: {
     id: '1',
     username: 'admin',
-    avatar: 'https://i.pravatar.cc/100',
+    avatar: AvatarImg,
   },
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',

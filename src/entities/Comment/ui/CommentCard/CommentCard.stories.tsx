@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { CommentCard } from './CommentCard';
+import AvatarImg from '@/shared/assets/tests/avatar.jpg';
 
 export default {
   title: 'entities/Comment/CommentCard',
@@ -23,7 +24,7 @@ Primary.args = {
     user: {
       id: '1',
       username: 'XXXXX',
-      avatar: 'https://i.pravatar.cc/100',
+      avatar: AvatarImg,
     },
   },
 };
@@ -36,7 +37,7 @@ Loading.args = {
     user: {
       id: '1',
       username: 'XXXXX',
-      avatar: 'https://i.pravatar.cc/100',
+      avatar: AvatarImg,
     },
   },
   isLoading: true,
