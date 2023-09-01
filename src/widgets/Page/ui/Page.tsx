@@ -11,8 +11,9 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
+import { TetsProps } from '@/shared/types/test';
 
-interface PageProps {
+interface PageProps extends TetsProps {
   className?: string;
   children: React.ReactNode;
   onScrollEnd?: () => void;
@@ -20,7 +21,9 @@ interface PageProps {
 
 export const PAGE_ID = 'PAGE_ID';
 
-export const Page = memo(({ className, children, onScrollEnd }: PageProps) => {
+export const Page = memo((props: PageProps) => {
+  const { className, children, onScrollEnd } = props;
+
   const wrapperRef = useRef() as MutableRefObject<HTMLElement>;
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
@@ -52,6 +55,7 @@ export const Page = memo(({ className, children, onScrollEnd }: PageProps) => {
       className={classNames(cls.page, {}, [className])}
       onScroll={onScroll}
       id={PAGE_ID}
+      data-testid={props['data-testid'] ?? PAGE_ID}
     >
       {children}
       <div ref={triggerRef} style={{ marginBottom: '40px' }} />

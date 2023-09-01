@@ -3,12 +3,12 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
 import { Input } from '@/shared/ui/Input';
 import { Loader } from '@/shared/ui/Loader';
-import { Avatar } from '@/shared/ui/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
-import { CountrySelect, Country } from '@/entities/Country';
+import { Country, CountrySelect } from '@/entities/Country';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
+import { Avatar } from '@/shared/ui/Avatar';
 
 interface ProfileCardProps {
   className?: string

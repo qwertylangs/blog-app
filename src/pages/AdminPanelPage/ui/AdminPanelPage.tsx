@@ -8,7 +8,7 @@ interface AdminPanelPageProps {
 
 const AdminPanelPage = memo(({ className }: AdminPanelPageProps) => {
   const { t } = useTranslation();
-  return <div className={classNames('', {}, [className])}>{t('AdminPanelPage')}</div>;
+  return <div data-testid="AdminPanelPage" className={classNames('', {}, [className])}>{t('AdminPanelPage')}</div>;
 });
 
 export default AdminPanelPage;
