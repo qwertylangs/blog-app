@@ -1,9 +1,15 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import withMock from 'storybook-addon-mock';
 import { NotificationList } from './NotificationList';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article } from '@/entities/Article';
+import { Notification } from '../../model/types/notification';
+
+const notification: Notification = {
+  id: '1',
+  title: 'title123',
+  description: 'description123456',
+  href: '/',
+};
 
 export default {
   title: 'entities/NotificationList',
@@ -14,23 +20,21 @@ export default {
   args: {
     to: '/',
   },
-  decorators: [withMock],
-} as ComponentMeta<typeof NotificationList>;
-
-const article: Article = {
-  id: '1',
-  blocks: [],
-  type: [],
-  createdAt: '',
-  img: '',
-  title: 'title',
-  subtitle: 'subtitle',
-  user: {
-    id: '1',
-    username: 'XXXXXXXX',
+  parameters: {
+    mockData: [
+      {
+        url: `${__API__}/notifications`,
+        method: 'GET',
+        status: 200,
+        response: [
+          { ...notification, id: '1' },
+          { ...notification, id: '2' },
+          { ...notification, id: '3' },
+        ],
+      },
+    ],
   },
-  views: 0,
-};
+} as ComponentMeta<typeof NotificationList>;
 
 const Template: ComponentStory<typeof NotificationList> = (args: any) => <NotificationList {...args} />;
 
@@ -39,18 +43,3 @@ Primary.args = {
 };
 
 Primary.decorators = [StoreDecorator({})];
-
-Primary.parameters = {
-  mockData: [
-    {
-      url: `${__API__}/notifications`,
-      method: 'GET',
-      status: 200,
-      response: [
-        { ...article, id: '1' },
-        { ...article, id: '2' },
-        { ...article, id: '3' },
-      ],
-    },
-  ],
-};
