@@ -1,0 +1,48 @@
+{
+  "id": "2",
+  "userId": "2",
+  "title": "React Hooks: основы и примеры",
+  "subtitle": "Изучаем основные хуки React",
+  "img": "https://www.educative.io/cdn-cgi/image/f=auto,fit=contain,w=1200/api/page/6018530514305024/image/download/5753173610332160",
+  "views": 785,
+  "createdAt": "10.05.2022",
+  "type": [
+    "IT"
+  ],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "TEXT",
+      "title": "Введение в React Hooks",
+      "paragraphs": [
+        "React Hooks предоставляют более простой способ работы с состоянием и побочными эффектами в компонентах React.",
+        "Хуки позволяют использовать состояние и другие возможности React, не писав классовые компоненты.",
+        "В этой статье мы рассмотрим основные хуки и примеры их использования."
+      ]
+    },
+    {
+      "id": "2",
+      "type": "CODE",
+      "code": "import React, { useState, useEffect } from 'react';\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `Вы нажали ${count} раз`;\n  });\n\n  return (\n    <div>\n      <p>Вы нажали {count} раз</p>\n      <button onClick={() => setCount(count + 1)}>\n        Нажми на меня\n      </button>\n    </div>\n  );\n}"
+    },
+    {
+      "id": "3",
+      "type": "TEXT",
+      "title": "Пример использования хуков",
+      "paragraphs": [
+        "В приведенном выше коде используется хук useState для создания состояния count и функции setCount для его обновления.",
+        "Хук useEffect используется для выполнения побочного эффекта при каждом обновлении компонента, в данном случае изменяется заголовок документа.",
+        "Таким образом, хуки позволяют нам управлять состоянием и побочными эффектами в функциональных компонентах React."
+      ]
+    }
+  ],
+  "user": {
+    "id": "2",
+    "username": "user",
+    "password": "123",
+    "role": [
+      "USER"
+    ],
+    "avatar": "https://cdnstatic.rg.ru/invalidurl"
+  }
+}
