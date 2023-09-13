@@ -12,6 +12,7 @@ import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
+import { useArticleById } from '../../model/selectors/article';
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -24,6 +25,9 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const { t } = useTranslation('article-details');
   const { id } = useParams();
+
+  const article = useArticleById('1');
+  console.log(article);
 
   if (!id) {
     return (
