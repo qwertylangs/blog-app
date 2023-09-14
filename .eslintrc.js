@@ -67,6 +67,7 @@ module.exports = {
       alias: '@',
       ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
     }],
+    'react/no-unstable-nested-components': 'warn',
   },
   overrides: [
     {

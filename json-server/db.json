@@ -1091,6 +1091,10 @@
       "role": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://i.pravatar.cc/100"
     },
     {
@@ -1100,6 +1104,10 @@
       "role": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
       "avatar": "https://cdnstatic.rg.ru/invalidurl"
     },
     {
@@ -1109,6 +1117,10 @@
       "role": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
       "avatar": "https://i.pravatar.cc/100"
     },
     {
@@ -1118,6 +1130,10 @@
       "role": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://i.pravatar.cc/100"
     }
   ],
