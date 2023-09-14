@@ -41,7 +41,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
   const isArticleRatingEnabled = toggleFeatures({
     name: 'isArticleRatingEnabled',
-    on: () => <ArticleRating articleId={article.id} />,
+    on: () => <ArticleRating articleId={id} />,
     off: () => <Card>{t('Оценка статьи скоро появится')}</Card>,
   });
 
