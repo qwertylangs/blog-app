@@ -1095,7 +1095,12 @@
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true
       },
-      "avatar": "https://i.pravatar.cc/100"
+      "avatar": "https://i.pravatar.cc/100",
+      "jsonSettings": {
+        "theme": "app_purple_theme",
+        "isFirstVisit": false,
+        "settingsPageHasBeenOpen": true
+      }
     },
     {
       "id": "2",

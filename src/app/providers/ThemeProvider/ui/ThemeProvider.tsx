@@ -1,9 +1,8 @@
-import React, { useMemo, useState } from 'react';
-import { LOCAL_STORAGE_THEME_KEY } from '@/shared/const/localstorage';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Theme } from '@/shared/const/theme';
 import { ThemeContext } from '@/shared/lib/context/ThemeContext';
-
-const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
+import { getUserInited, useJsonSettings } from '@/entities/User';
 
 interface ThemeProviderProps {
   initialTheme?: Theme;
@@ -16,7 +15,16 @@ const ThemeProvider = (props: ThemeProviderProps) => {
     children,
   } = props;
 
-  const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
+  const userInited = useSelector(getUserInited);
+  const { theme: defaultTheme } = useJsonSettings();
+
+  const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme || Theme.LIGHT);
+
+  useEffect(() => {
+    if (userInited) {
+      setTheme(defaultTheme || Theme.LIGHT);
+    }
+  }, [defaultTheme, userInited]);
 
   const defaultProps = useMemo(() => ({
     theme,

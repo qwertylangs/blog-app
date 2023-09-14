@@ -3,18 +3,24 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { getUserInited, useUserActions } from '@/entities/User';
+import { getUserInited, initAuthData } from '@/entities/User';
 import { AppRouter } from './providers/router';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { PageLoader } from '@/widgets/PageLoader';
 
 function App() {
   const { theme } = useTheme();
-  const { initAuthData } = useUserActions();
   const inited = useSelector(getUserInited);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    initAuthData();
-  }, [initAuthData]);
+    dispatch(initAuthData()).then(console.log);
+  }, [dispatch]);
+
+  if (!inited) {
+    return <PageLoader />;
+  }
 
   return (
     <div className={classNames('app', {}, [theme])}>
