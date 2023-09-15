@@ -13,6 +13,10 @@ export const saveJsonSettings = createAsyncThunk<
     const userData = getUserAuthData(getState());
     const currentJsonSettings = getJsonSettings(getState());
 
+    if (!userData) {
+      return rejectWithValue('no user');
+    }
+
     try {
       const response = await dispatch(setJsonSettingsMutation({
         id: userData?.id ?? '',

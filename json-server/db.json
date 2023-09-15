@@ -1097,9 +1097,9 @@
       },
       "avatar": "https://i.pravatar.cc/100",
       "jsonSettings": {
-        "theme": "app_purple_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": false,
-        "settingsPageHasBeenOpen": true
+        "isArticlesPageWasVisited": true
       }
     },
     {
@@ -1113,7 +1113,12 @@
         "isArticleRatingEnabled": false,
         "isCounterEnabled": true
       },
-      "avatar": "https://cdnstatic.rg.ru/invalidurl"
+      "avatar": "https://cdnstatic.rg.ru/invalidurl",
+      "jsonSettings": {
+        "theme": "app_light_theme",
+        "isFirstVisit": false,
+        "isArticlesPageWasVisited": true
+      }
     },
     {
       "id": "3",
@@ -1126,7 +1131,12 @@
         "isArticleRatingEnabled": false,
         "isCounterEnabled": false
       },
-      "avatar": "https://i.pravatar.cc/100"
+      "avatar": "https://i.pravatar.cc/100",
+      "jsonSettings": {
+        "theme": "app_purple_theme",
+        "isFirstVisit": false,
+        "isArticlesPageWasVisited": false
+      }
     },
     {
       "id": "4",
@@ -1139,7 +1149,12 @@
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true
       },
-      "avatar": "https://i.pravatar.cc/100"
+      "avatar": "https://i.pravatar.cc/100",
+      "jsonSettings": {
+        "theme": "app_purple_theme",
+        "isFirstVisit": false,
+        "isArticlesPageWasVisited": false
+      }
     }
   ],
   "profile": [

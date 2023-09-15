@@ -9,6 +9,7 @@ import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { ArticlesInfinityList } from '../ArticlesInfinityList/ArticlesInfinityList';
 import cls from './ArticlesPage.module.scss';
+import { ArticlesPageGreeting } from '@/features/articlesPageGreeting';
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -28,6 +29,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page data-testid="ArticlesPage" onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlesPage, {}, [className])}>
+        <ArticlesPageGreeting />
         <ArticlesPageFilters />
         <ArticlesInfinityList className={cls.list} />
       </Page>
